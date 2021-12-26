@@ -10,4 +10,4 @@ ripped using httrack (terminal version)
     - fully rippeds
 
 
-3. 
+3. [smartup-visuals](https://smartupvisuals.com/)
