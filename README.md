@@ -9,5 +9,15 @@ ripped using httrack (terminal version)
 2. [dariaizbash-portfolio](https://www.dariaizbash.com/)
     - fully rippeds
 
+3. [baillat-studios](https://baillatstudio.com/en)
+    - lowkey huge asf
 
-3. [smartup-visuals](https://smartupvisuals.com/)
+4. [smartup-visuals](https://smartupvisuals.com/)
+    - re-run twice
+
+
+5. [manover-board-portfolio](https://manoverboard.com/)
+
+
+6. [vovi-portfolio](https://www.vovi.studio/)
+    - ez rip

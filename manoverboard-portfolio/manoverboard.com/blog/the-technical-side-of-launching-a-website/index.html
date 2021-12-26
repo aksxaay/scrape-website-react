@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from manoverboard.com/blog/the-technical-side-of-launching-a-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Dec 2021 21:30:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+
+    <!-- Meta Data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <title>The technical side of launching a website | Manoverboard </title>
+    <meta content="Manoverboard Inc." name="web-author">
+    <meta content="Manoverboard Inc." name="author">
+    <meta content="" name="description">
+    <link href="../../index.html" rel="canonical">
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>The technical side of launching a website | Design for Change: Websites, Branding and Digital Strategy</title>
+<meta content="Jekyll v4.0.1" name="generator">
+<meta content="The technical side of launching a website" property="og:title">
+<meta content="The Team" name="author">
+<meta content="en_US" property="og:locale">
+<meta content="At Manoverboard, building websites is a collaborative process. Our team does a lot, but the client and other industry professionals play an important role. Launching a website can be confusing and stressful." name="description">
+<meta content="At Manoverboard, building websites is a collaborative process. Our team does a lot, but the client and other industry professionals play an important role. Launching a website can be confusing and stressful." property="og:description">
+<link href="index.html" rel="canonical">
+<meta content="/blog/the-technical-side-of-launching-a-website/" property="og:url">
+<meta content="Design for Change: Websites, Branding and Digital Strategy" property="og:site_name">
+<meta content="article" property="og:type">
+<meta content="2021-10-19T19:34:29+00:00" property="article:published_time">
+<meta content="summary" name="twitter:card">
+<meta content="The technical side of launching a website" property="twitter:title">
+<script type="application/ld+json">
+{"url":"/blog/the-technical-side-of-launching-a-website/","author":{"@type":"Person","name":"The Team"},"@type":"BlogPosting","description":"At Manoverboard, building websites is a collaborative process. Our team does a lot, but the client and other industry professionals play an important role. Launching a website can be confusing and stressful.","headline":"The technical side of launching a website","dateModified":"2021-10-19T19:34:29+00:00","datePublished":"2021-10-19T19:34:29+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/the-technical-side-of-launching-a-website/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- End Meta Data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
+    
+    <!-- bugherd -->
+    <script async="true" src="https://www.bugherd.com/sidebarv2.js?apikey=bqnxkx0pnkx3ryq3sd0bdg" type="text/javascript"></script>
+    
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script data-site="CVXSEJVQ" defer="" src="https://cdn.usefathom.com/script.js"></script>
+    <!-- / Fathom -->
+
+    <!-- favicons -->
+    <link data-cms-original-href="/favicons/apple-touch-icon.png" href="../../favicons/apple-touch-iconaa02.png?_cchid=31ef4fe02a04c904c527501871f4d694" rel="apple-touch-icon" sizes="180x180">
+    <link data-cms-original-href="/favicons/favicon-32x32.png" href="../../favicons/favicon-32x3273c2.png?_cchid=06eade9d5d11a5429ff156252816c64a" rel="icon" sizes="32x32" type="image/png">
+    <link data-cms-original-href="/favicons/favicon-16x16.png" href="../../favicons/favicon-16x16e43e.png?_cchid=697da9ae20f807047cf4402c53ee9b92" rel="icon" sizes="16x16" type="image/png">
+    <meta content="#da532c" name="msapplication-TileColor">
+    <meta content="#000000" name="theme-color">
+
+    <!-- smoothscrollbar -->
+    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+
+    <!-- barba -->
+    <script src="https://unpkg.com/@barba/core@2.9.7/dist/barba.umd.js"></script>
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver">
+    </script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <script data-cms-original-src="/js/CustomEase.min.js" src="../../js/CustomEase.min40a6.js?_cchid=37e567ab1cb84afc819e00e385e7a379"></script>
+    <script data-cms-original-src="/js/split-text.min.js" src="../../js/split-text.min6aa9.js?_cchid=a089dd9776d5882f6dcb8e34c46ca7e4"></script>
+
+    <!-- flickity (base for our slider)-->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link href="https://unpkg.com/flickity@2/dist/flickity.min.css" rel="stylesheet">
+
+    <!-- scripts -->
+    <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" src="https://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script data-cms-original-src="/js/matter.js" src="../../js/matterc67f.js?_cchid=a598932ba867b1bdd1e7968254a6129d"></script>
+    <script data-cms-original-src="/js/global.js?v=1" src="../../js/global12b7.js?_cchid=c8cc2efded01a9093e4d44b8c1a6bd81&amp;v=1"></script>
+
+    <!-- css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link data-cms-original-href="/css/main.css?v=1" href="../../css/main35af.css?_cchid=778ff05ff7dc9606e20a3e3076a5a3c6&amp;v=1" rel="stylesheet">
+    <link data-cms-original-href="/css/style-print.css" href="../../css/style-print826b.css?_cchid=98bee4a143ef0ce67546b09d981d22b7" media="print" rel="stylesheet">
+    <link href="awwwards.html" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Hyperform -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hyperform/0.12.0/hyperform.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hyperform/0.12.0/hyperform.css" rel="stylesheet">
+
+    <!-- font preload -->
+    <link as="font" crossorigin="anonymous" href="https://sure-gerbil.cloudvent.net/font/UniversalSansGX.ttf" rel="preload" type="font/woff">
+
+    <!-- end wp head -->
+</head>
+
+<body data-barba="wrapper" id="bodyID">
+    <div class="drag-cursor"></div>
+    <div class="honorable black right" id="awwwards">
+      <a href="http://www.awwwards.com/" target="_blank">Awwwards</a>
+    </div>
+
+
+
+    <div aria-hidden="true" id="loader">
+        <div id="loaderContent">
+            <div class="loader-content-lottie"></div>
+        </div>
+    </div>
+    <div aria-hidden="true" id="pageTransition">
+        <div id="pageTransitionContent">
+            <p>Next Page</p>
+        </div>
+    </div>
+    <a href="#skipNavigation" id="skipLink">Skip Navigation</a>
+    <header class="main-header wo" id="mainHeader">
+        <div class="main-header__logo-area col-1-to-7 m-col-1-to-3 s-col-1-to-4">
+            <a href="../../index.html">
+                <img alt="Manoverboard" class="black-only" data-cms-original-src="/images/manoverboard-logo-black.svg" src="../../images/manoverboard-logo-black9753.svg?_cchid=581cda2a45142441c5782898814e80c7">
+                <img alt="Manoverboard" class="white-only" data-cms-original-src="/images/manoverboard-logo-white.svg" src="../../images/manoverboard-logo-whitefa96.svg?_cchid=568a00774965bff04763db9cf9d936c1">
+            </a>
+        </div>
+        <nav class="main-header__nav col-7-to-11 m-col-4-to-8" id="mainNav">
+        
+        
+
+        
+            <a class="main-header__nav__link" href="../../work/index.html">Work</a>
+        
+            <a class="main-header__nav__link" href="../../about/index.html">About</a>
+        
+            <a class="main-header__nav__link" href="../../services/index.html">Services</a>
+        
+            <a class="main-header__nav__link active" href="../index.html">Blog</a>
+        
+            <a class="main-header__nav__link" href="../../hello/index.html">Hello</a>
+        
+        </nav>
+        <div class="main-header__geo right col-11-to-13 m-col-8-to-11 s-hide">
+            <p>YWG / <span id="weather"></span> <span id="moon"></span></p>
+        </div>
+        <button aria-controls="mainNav" aria-expanded="false" class="strip" id="navToggle">+<span class="sr-only">Menu</span></button>
+    </header>
+
+    <div id="skipNavigation"></div>
+
+    <div id="scrollWrapper">
+
+<div data-barba="container" data-barba-namespace="Post">
+    <article>
+        <div class="wo post-heading border-bottom">
+            <h1 class="col-3-to-11 m-col-2-to-9 s-col-1-to-5">The technical side of launching a website</h1>
+        </div>
+
+        <div class="post-info wo">
+            <a class="link left post-info__back-button mono-body col-1-to-3 m-col-1-to-3 s-col-1-to-2" href="../index.html">Blog</a>
+            <p class="post-info__date mono-body col-3-to-8 m-col-3-to-5 s-col-3-to-5">October 19, 2021</p>
+            <p class="post-info__author mono-body col-10-to-13 m-col-5-to-11 s-col-1-to-5">
+                
+                Written by <a class="link" href="../../author/the-team.html">The Team</a>
+            </p>
+        </div>
+
+        <div class="post-content wo">
+            <div class="post-content__content col-3-to-9 m-col-2-to-10 s-col-1-to-5" data-cms-content-wrapper="/_layouts/post.html">
+                <p>At Manoverboard, building websites is a collaborative process. Our team does a lot, but the client and other industry professionals play an important role. Launching a website can be confusing and stressful.</p>
+
+<p>After weeks of architecting, designing, writing and developing, things are starting to shape up, but the admin, logistics, and IT are just beginning. Mapping the course and knowing what’s ahead will make launching your new website smooth sailing.</p>
+
+<h2 id="font-licenses"><strong>Font Licenses</strong></h2>
+
+<p>Each design and website project budget is different. However, all websites require font files. Companies that create typefaces&nbsp; will often provide their font files for testing purposes to use for non-public facing design and development. When your website goes live, we need appropriate licenses for each font file.</p>
+
+<p>Fonts for the web usually range between $20 to $200 per file (or even thousands of dollars for some variable fonts). For tight budgets or less bespoke websites, Google offers some excellent <a href="https://fonts.google.com/">free web fonts</a>.&nbsp;</p>
+
+<p>The site owner needs to purchase and register the font licenses. Once the fonts are ready for commercial use, all we need is the purchased font files or cloud hosting link to make them work on the new website.</p>
+
+<h2 id="301-redirects"><strong>301 Redirects</strong></h2>
+
+<p>If we are replacing an old website with a new website at a domain, use 301 redirects to forward old pages to new pages. A 301 redirect means <em>moved permanently</em> and offers the best chance at keeping search engine rankings. If we are launching the first website at a <a href="https://techterms.com/definition/domain_name">domain name</a>, we can skip this step.</p>
+
+<p>We need to create these 301 redirects in a file or through an interface to tell the search engine to show the page <em>yoursite.com/new-about</em> when a visitor goes to the old address at <em>yoursite.com/old-about</em>.</p>
+
+<p>In most cases, we take care of the technical bits, but we’ll need a list from the site owner of what needs to be redirected and where it needs to go on the new website. We can redirect all pages for small sites, but for larger sites, choosing the top-visited pages is more efficient.&nbsp; This data can be collected from any web analytic platform.</p>
+
+<h2 id="analytics"><strong>Analytics</strong></h2>
+
+<p>Analytics platforms track visits to your site and often collect a wide array of personal data like visitors’ countries of origin and how long they’ve been on a page. Not all websites have (or need) analytics, so this may not be relevant to your organization. An analytics platform provides sections of code (that is placed on the website) that connects the analytics platform to the website.&nbsp;</p>
+
+<p>By far, the most popular analytics platform is Google Analytics, however it has some drawbacks. Google Analytics has specific requirements in its <a href="https://marketingplatform.google.com/about/analytics/terms/us/">terms of service</a> that relate to country-specific laws, and your website’s privacy policy. We recommend further reading on how Google Analytics may affect your site: <a href="../privacy-policies-cookie-consent/index.html">Privacy Policies &amp; Cookie Consent</a>. If you’re interested in this topic, we also wrote a blog post about <a href="../who-is-responsible-for-online-privacy/index.html">online privacy</a>.</p>
+
+<p>We are increasingly seeing folks move away from Google Analytics to newer, less invasive platforms such as <a href="https://usefathom.com/">Fathom Analytics</a>. Not every analytics platform has to put a burden on your organization to follow complex laws and regulations.&nbsp;</p>
+
+<h2 id="website-hosting-and-ssl-certificates"><strong>Website Hosting and SSL Certificates</strong></h2>
+
+<p>A website hosting service has servers where website files can be stored; these servers are available for purchase or rent. We’ve used a lot of different hosts at Manoverboard and give our clients recommendations and guidance tailored to suit the new website’s requirements.</p>
+
+<p>An SSL Certificate is what changes the URL prefix from HTTP, to HTTPS which is more secure. You know you’re on a secure site when it shows a lock icon in your browser. The main functions of this certificate are to encrypt data, gain trust from visitors and search engines, and prove website ownership.</p>
+
+<p>Getting the certificate is made easy by many hosts but can be difficult, expensive, and time consuming with others. We recommend:</p>
+
+<ul>
+  <li>Finding a host that offers SSL certificates as part of their hosting package</li>
+  <li>Purchasing a certificate through the website host to avoid several time-consuming technical tasks</li>
+  <li>Looking into how to obtain an SSL Certificate well before launching a website</li>
+</ul>
+
+<p>The website host or a client’s IT firm can always provide assistance.</p>
+
+<h2 id="website-it-and-security"><strong>Website IT and Security</strong></h2>
+
+<p>At Manoverboard, we leave most IT to the professionals. Web security and IT services are very different from the website development we provide. Services that are critical to launching a website that are not generally within our expertise include email server setup and migration, and domain and nameserver (DNS) setup and migration.&nbsp;</p>
+
+<p>Hiring the right people for the job can avoid website launch and migration disasters. We routinely recommend IT firms to our clients if they don’t have an existing relationship.</p>
+
+<p>Coordinating the items discussed in this article as soon as possible and connecting IT (or other) teams with us well in advance can keep you out of rough waters.&nbsp;</p>
+
+<p>Choosing a launch date earlier in the week is wise because it will also allow teams not working on weekends to assist with anything that might need adjustment along the way.</p>
+
+<p>We depend on others to handle specific tasks: clients have to secure accounts and licenses, and IT teams take the sails for servers and domains. Regardless, we’re with you every step of the way.</p>
+
+            </div>
+            <div class="post-content__categories col-10-to-13 m-col-2-to-10 s-col-1-to-5">
+                <h2 class="mono-body">Topics</h2>
+                <ul>
+                    
+                    <li class="mono-body"><a href="../../archive/development/index.html">Development</a></li>
+                    
+                    <li class="mono-body"><a href="../../archive/technology/index.html">Technology</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <section class="project-start-cta wo-stacked border-top border-bottom">
+    <h2 class="editable" data-cms-index="0" data-cms-source="/_includes/lets-get-going.html">
+        Ready to work together?
+    </h2>
+    <h3>
+        <a href="../../start-a-project/index.html">
+            Start a project
+        </a>
+        <div class="project-start-cta__arrow"></div>
+    </h3>
+</section>
+
+
+    <footer class="main-footer border-top wo" id="mainFooter">
+	<a class="col-1-to-3 editable m-col-1-to-2 s-col-1-to-2" data-cms-index="0" data-cms-source="/_includes/footer.html" href="../../about/bcorp/index.html">
+		<img alt="Certified B Corporation" class="black-only" data-cms-original-src="/images/b-corporation-logo-black.svg" src="../../images/b-corporation-logo-black6b45.svg?_cchid=c86e546e27ec839f5255d5d1a4d95ed9">
+		<img alt="Certified B Corporation" class="white-only" data-cms-original-src="/images/b-corporation-logo-white.svg" src="../../images/b-corporation-logo-white921b.svg?_cchid=e5335de756a79ac75d85eed518947de3">
+	</a>
+	<div class="list col-3-to-5 m-col-4-to-8 s-col-1-to-5">
+		<h2 class="hidden">Contact</h2>
+		<a class="editable" data-cms-index="1" data-cms-source="/_includes/footer.html" href="tel:1-204-477-4474">+1 204-477-4474</a>
+		<a class="editable" data-cms-index="2" data-cms-source="/_includes/footer.html" href="mailto:hello@manoverboard.com">hello@manoverboard.com</a>
+	</div>
+	<div class="list col-5-to-7 m-col-8-to-11 s-col-1-to-5">
+		<h2 class="hidden">Social media</h2>
+		<a class="editable" data-cms-index="3" data-cms-source="/_includes/footer.html" href="https://www.instagram.com/manoverboardinc/" rel="noopener noreferrer" target="_blank">Instagram</a>
+		<a class="editable" data-cms-index="4" data-cms-source="/_includes/footer.html" href="https://ca.linkedin.com/company/manoverboard" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+		<a class="editable" data-cms-index="5" data-cms-source="/_includes/footer.html" href="https://twitter.com/manoverboardinc/" rel="noopener noreferrer" target="_blank">Twitter</a>
+	</div>
+	<div class="newsletter-subscribe col-7-to-9 m-col-4-to-10 s-col-1-to-5">
+		<h2 class="newsletter-subscribe__heading">
+			Newsletter
+		</h2>
+		<!-- new Campaign Monitor form -->
+		<form action="https://www.createsend.com/t/subscribeerror?description=" class="js-cm-form" data-id="5B5E7037DA78A748374AD499497E309E447519013EAF5BED06D7A9CF2D7CBBC403B5FF81850048E294493CE00B1B90C3A2ED5CECCDB89D5293F789C8F11316C1" id="subForm" method="post">
+			<!-- <label>Name</label>
+			<input aria-label="Name" id="fieldName" maxlength="200" name="cm-name" class="strip"> -->
+			<label class="light">Email</label>
+			<div>
+				<input aria-label="Email" autocomplete="Email" class="js-cm-email-input qa-input-email strip" id="fieldEmail" maxlength="200" name="cm-ktzity-ktzity" required="" type="email">
+				<button class="strip" type="submit">Subscribe</button>
+			</div>
+		<input name="_encrypted_details" type="hidden" value="8e03188416586cc142ba81ca942625ce"></form>
+		<script src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js" type="text/javascript"></script>
+	</div>
+	<div class="right col-9-to-13 m-hide s-hide">
+		<button class="strip" id="toTop">
+			Top
+			<img alt="" aria-hidden="true" class="black-only" data-cms-original-src="/images/up-arrow-black.svg" src="../../images/up-arrow-black1b39.svg?_cchid=5c79f97da7e54dae79278c35233742bd">
+			<img alt="" aria-hidden="true" class="white-only" data-cms-original-src="/images/up-arrow-white.svg" src="../../images/up-arrow-white6588.svg?_cchid=64dd1cab0ebf1c5eb1cd3ecc23d833bd">
+		</button>
+	</div>
+
+	<div class="spacer col-1-to-13 m-col-1-to-11 s-col-1-to-5"></div>
+
+	<p class="col-1-to-3 light editable m-col-1-to-4 s-col-1-to-5" data-cms-index="6" data-cms-source="/_includes/footer.html">
+	    © 2021 Manoverboard
+	</p>
+	<a class="col-3-to-5 light editable m-col-4-to-6 s-col-1-to-2" data-cms-index="7" data-cms-source="/_includes/footer.html" href="../../privacy/index.html">
+		Privacy
+	</a>
+	<a class="light editable col-5-to-7 m-col-6-to-8 s-col-2-to-3" data-cms-index="8" data-cms-source="/_includes/footer.html" href="../../accessibility/index.html">
+		Accessibility
+	</a>
+	<p class="col-8-to-13 light right editable m-col-8-to-11 s-col-3-to-5" data-cms-index="9" data-cms-source="/_includes/footer.html">
+	    Made in Canada
+	</p>
+</footer>
+
+<div class="safari_only"></div>
+
+<!-- lottie support -->
+<script crossorigin="anonymous" integrity="sha512-u17Fj9cQ8L0qSebNF1zhbeAvbqSUBhX3jILF5zuZh2omdVev/zlHMeW0f2fDSW4o+/kbin6ZA9LtLfaXS0WIlQ==" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie_light.min.js"></script>
+
+<!-- end #scrollWrapper -->
+
+</div></div></body>
+<!-- Mirrored from manoverboard.com/blog/the-technical-side-of-launching-a-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Dec 2021 21:30:28 GMT -->
+</html>

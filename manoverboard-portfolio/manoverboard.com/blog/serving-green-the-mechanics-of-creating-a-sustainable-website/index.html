@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from manoverboard.com/blog/serving-green-the-mechanics-of-creating-a-sustainable-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Dec 2021 21:33:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+
+    <!-- Meta Data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <title>Serving Green: The Mechanics of Creating a Sustainable Website | Manoverboard </title>
+    <meta content="Manoverboard Inc." name="web-author">
+    <meta content="Manoverboard Inc." name="author">
+    <meta content="" name="description">
+    <link href="../../index.html" rel="canonical">
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Serving Green: The Mechanics of Creating a Sustainable Website | Design for Change: Websites, Branding and Digital Strategy</title>
+<meta content="Jekyll v4.0.1" name="generator">
+<meta content="Serving Green: The Mechanics of Creating a Sustainable Website" property="og:title">
+<meta content="Dan Lamb" name="author">
+<meta content="en_US" property="og:locale">
+<meta content="Three months ago we proudly launched Serving.Green, our web initiative designed to highlight the impact that the internet has on the environment, and what we can all do to reduce that impact. Now that the dust has settled a bit, I’d like to say a few words about what we did from a development standpoint to make the site as efficient as we could, given our design objectives." name="description">
+<meta content="Three months ago we proudly launched Serving.Green, our web initiative designed to highlight the impact that the internet has on the environment, and what we can all do to reduce that impact. Now that the dust has settled a bit, I’d like to say a few words about what we did from a development standpoint to make the site as efficient as we could, given our design objectives." property="og:description">
+<link href="index.html" rel="canonical">
+<meta content="/blog/serving-green-the-mechanics-of-creating-a-sustainable-website/" property="og:url">
+<meta content="Design for Change: Websites, Branding and Digital Strategy" property="og:site_name">
+<meta content="article" property="og:type">
+<meta content="2017-02-13T00:00:00+00:00" property="article:published_time">
+<meta content="summary" name="twitter:card">
+<meta content="Serving Green: The Mechanics of Creating a Sustainable Website" property="twitter:title">
+<script type="application/ld+json">
+{"url":"/blog/serving-green-the-mechanics-of-creating-a-sustainable-website/","author":{"@type":"Person","name":"Dan Lamb"},"@type":"BlogPosting","description":"Three months ago we proudly launched Serving.Green, our web initiative designed to highlight the impact that the internet has on the environment, and what we can all do to reduce that impact. Now that the dust has settled a bit, I’d like to say a few words about what we did from a development standpoint to make the site as efficient as we could, given our design objectives.","headline":"Serving Green: The Mechanics of Creating a Sustainable Website","dateModified":"2017-02-13T00:00:00+00:00","datePublished":"2017-02-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/serving-green-the-mechanics-of-creating-a-sustainable-website/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- End Meta Data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
+    
+    <!-- bugherd -->
+    <script async="true" src="https://www.bugherd.com/sidebarv2.js?apikey=bqnxkx0pnkx3ryq3sd0bdg" type="text/javascript"></script>
+    
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script data-site="CVXSEJVQ" defer="" src="https://cdn.usefathom.com/script.js"></script>
+    <!-- / Fathom -->
+
+    <!-- favicons -->
+    <link data-cms-original-href="/favicons/apple-touch-icon.png" href="../../favicons/apple-touch-iconaa02.png?_cchid=31ef4fe02a04c904c527501871f4d694" rel="apple-touch-icon" sizes="180x180">
+    <link data-cms-original-href="/favicons/favicon-32x32.png" href="../../favicons/favicon-32x3273c2.png?_cchid=06eade9d5d11a5429ff156252816c64a" rel="icon" sizes="32x32" type="image/png">
+    <link data-cms-original-href="/favicons/favicon-16x16.png" href="../../favicons/favicon-16x16e43e.png?_cchid=697da9ae20f807047cf4402c53ee9b92" rel="icon" sizes="16x16" type="image/png">
+    <meta content="#da532c" name="msapplication-TileColor">
+    <meta content="#000000" name="theme-color">
+
+    <!-- smoothscrollbar -->
+    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+
+    <!-- barba -->
+    <script src="https://unpkg.com/@barba/core@2.9.7/dist/barba.umd.js"></script>
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver">
+    </script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <script data-cms-original-src="/js/CustomEase.min.js" src="../../js/CustomEase.min40a6.js?_cchid=37e567ab1cb84afc819e00e385e7a379"></script>
+    <script data-cms-original-src="/js/split-text.min.js" src="../../js/split-text.min6aa9.js?_cchid=a089dd9776d5882f6dcb8e34c46ca7e4"></script>
+
+    <!-- flickity (base for our slider)-->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link href="https://unpkg.com/flickity@2/dist/flickity.min.css" rel="stylesheet">
+
+    <!-- scripts -->
+    <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" src="https://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script data-cms-original-src="/js/matter.js" src="../../js/matterc67f.js?_cchid=a598932ba867b1bdd1e7968254a6129d"></script>
+    <script data-cms-original-src="/js/global.js?v=1" src="../../js/global12b7.js?_cchid=c8cc2efded01a9093e4d44b8c1a6bd81&amp;v=1"></script>
+
+    <!-- css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link data-cms-original-href="/css/main.css?v=1" href="../../css/main35af.css?_cchid=778ff05ff7dc9606e20a3e3076a5a3c6&amp;v=1" rel="stylesheet">
+    <link data-cms-original-href="/css/style-print.css" href="../../css/style-print826b.css?_cchid=98bee4a143ef0ce67546b09d981d22b7" media="print" rel="stylesheet">
+    <link href="awwwards.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Hyperform -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hyperform/0.12.0/hyperform.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hyperform/0.12.0/hyperform.css" rel="stylesheet">
+
+    <!-- font preload -->
+    <link as="font" crossorigin="anonymous" href="https://sure-gerbil.cloudvent.net/font/UniversalSansGX.ttf" rel="preload" type="font/woff">
+
+    <!-- end wp head -->
+</head>
+
+<body data-barba="wrapper" id="bodyID">
+    <div class="drag-cursor"></div>
+    <div class="honorable black right" id="awwwards">
+      <a href="http://www.awwwards.com/" target="_blank">Awwwards</a>
+    </div>
+
+
+
+    <div aria-hidden="true" id="loader">
+        <div id="loaderContent">
+            <div class="loader-content-lottie"></div>
+        </div>
+    </div>
+    <div aria-hidden="true" id="pageTransition">
+        <div id="pageTransitionContent">
+            <p>Next Page</p>
+        </div>
+    </div>
+    <a href="#skipNavigation" id="skipLink">Skip Navigation</a>
+    <header class="main-header wo" id="mainHeader">
+        <div class="main-header__logo-area col-1-to-7 m-col-1-to-3 s-col-1-to-4">
+            <a href="../../index.html">
+                <img alt="Manoverboard" class="black-only" data-cms-original-src="/images/manoverboard-logo-black.svg" src="../../images/manoverboard-logo-black9753.svg?_cchid=581cda2a45142441c5782898814e80c7">
+                <img alt="Manoverboard" class="white-only" data-cms-original-src="/images/manoverboard-logo-white.svg" src="../../images/manoverboard-logo-whitefa96.svg?_cchid=568a00774965bff04763db9cf9d936c1">
+            </a>
+        </div>
+        <nav class="main-header__nav col-7-to-11 m-col-4-to-8" id="mainNav">
+        
+        
+
+        
+            <a class="main-header__nav__link" href="../../work/index.html">Work</a>
+        
+            <a class="main-header__nav__link" href="../../about/index.html">About</a>
+        
+            <a class="main-header__nav__link" href="../../services/index.html">Services</a>
+        
+            <a class="main-header__nav__link active" href="../index.html">Blog</a>
+        
+            <a class="main-header__nav__link" href="../../hello/index.html">Hello</a>
+        
+        </nav>
+        <div class="main-header__geo right col-11-to-13 m-col-8-to-11 s-hide">
+            <p>YWG / <span id="weather"></span> <span id="moon"></span></p>
+        </div>
+        <button aria-controls="mainNav" aria-expanded="false" class="strip" id="navToggle">+<span class="sr-only">Menu</span></button>
+    </header>
+
+    <div id="skipNavigation"></div>
+
+    <div id="scrollWrapper">
+
+<div data-barba="container" data-barba-namespace="Post">
+    <article>
+        <div class="wo post-heading border-bottom">
+            <h1 class="col-3-to-11 m-col-2-to-9 s-col-1-to-5">Serving Green: The Mechanics of Creating a Sustainable Website</h1>
+        </div>
+
+        <div class="post-info wo">
+            <a class="link left post-info__back-button mono-body col-1-to-3 m-col-1-to-3 s-col-1-to-2" href="../index.html">Blog</a>
+            <p class="post-info__date mono-body col-3-to-8 m-col-3-to-5 s-col-3-to-5">February 13, 2017</p>
+            <p class="post-info__author mono-body col-10-to-13 m-col-5-to-11 s-col-1-to-5">
+                
+                Written by <a class="link" href="../../author/dan-lamb.html">Dan Lamb</a>
+            </p>
+        </div>
+
+        <div class="post-content wo">
+            <div class="post-content__content col-3-to-9 m-col-2-to-10 s-col-1-to-5" data-cms-content-wrapper="/_layouts/post.html">
+                <p><img alt="" class="alignnone wp-image-4139 size-full" data-cms-original-src="/images/old-wordpress/2017/02/serving-green2.jpg" height="464" src="../../images/old-wordpress/2017/02/serving-green2629c.jpg?_cchid=1f4e8e66aa15e1650d69886e3ccfafe7" width="922"></p>
+
+<p>Three months ago we proudly launched <a href="https://serving.green/">Serving.Green</a>, our web initiative designed to highlight the impact that the internet has on the environment, and what we can all do to reduce that impact.</p>
+
+<p>Now that the dust has settled a bit, I’d like to say a few words about what we did—from a development standpoint—to make the site as efficient as we could given our design objectives. I’ll be the first to admit that even more could be done, either by sacrificing some parts of the experience or by using techniques of which I’m not yet aware, but below are a few important tips and tricks that we can all do to make our websites more efficient. If you want to reach a digital green Nirvana, this will get you on your path.
+<!--more--></p>
+
+<p><img alt="" class="aligncenter size-full wp-image-4145" data-cms-original-src="/images/old-wordpress/2017/02/images.jpg" height="390" src="../../images/old-wordpress/2017/02/images3dbe.jpg?_cchid=e53aee22a6334d91b2d2e707cf73aac3" width="900"></p>
+
+<h2 id="1-images">1. Images</h2>
+
+<p>One of the biggest burdens for a website’s load time in a browser is typically images. I love high resolution imagery in my websites as much as the next guy, but they do come at price. To lighten the load, your choices here are fairly simple:</p>
+
+<ol>
+  <li>Get rid of images that you don’t really need.</li>
+  <li>Reduce the resolution of the images that you do need, as much as possible.</li>
+  <li>Reduce image quality to the absolute minimum that you can stand to look at.</li>
+  <li>Only serve large image as required for the size they’ll be displayed.</li>
+</ol>
+
+<p>A major philosophical thread that runs through all design is the idea of economy. My recommendation is to look at everything you’ve got, and ask yourself if you really need it. If you take something out and the design is better, or just as good, you didn’t need it anyway.</p>
+
+<h2>&nbsp;</h2>
+
+<p><img alt="" class="aligncenter size-large wp-image-4130" data-cms-original-src="/images/old-wordpress/2017/02/servinggreen-vidlength-1024x162.gif" height="162" src="../../images/old-wordpress/2017/02/servinggreen-vidlength-1024x162c6a5.gif?_cchid=81c0a714c3ec6f085f5ed52b02699d11" width="1024"></p>
+
+<h2 id="2-videos">2. Videos</h2>
+
+<p>The only thing worse than images (in terms of performance and efficiency) are videos. This is such a big deal that Apple stopped supporting auto-play of videos in 2013 because it was unexpectedly eating up people’s data plans.</p>
+
+<p>Serving.Green still uses a video because we wanted to show that it can be done smartly with green design practices. The <a href="https://serving.green/wp-content/uploads/geothermal-energy-plant.mp4">video we use of steam</a> (not smoke!) bellowing out of an Icelandic geothermal plant is only <strong>264kb</strong>. That’s on par, or smaller, than a typical banner image. How’d we do it?</p>
+
+<ol>
+  <li>Length (time)</li>
+  <li>Resolution</li>
+  <li>Embed method</li>
+</ol>
+
+<p>The video is only <strong>4 seconds</strong> long, but I carefully set up a seamless loop so it feels infinite. If you watch closely, you can see the point where it cross-fades back to the start.</p>
+
+<p>We also went with <strong>720p resolution</strong> because it kept the size down, and looked good enough since it’s mostly used behind other elements or is tinted green.</p>
+
+<p>Lastly, the video is embedded as an HTML5 video element. Our earlier iterations were embedding straight from YouTube, but we found that the overhead of script files required to load our tiny video outweighed the benefits achieved by offloading the burden of hosting the video to a third party (e.g. YouTube).</p>
+
+<p><img alt="" class="aligncenter size-large wp-image-4131" data-cms-original-src="/images/old-wordpress/2017/02/servinggreen-vids-1024x192.jpg" height="192" src="../../images/old-wordpress/2017/02/servinggreen-vids-1024x192eb3d.jpg?_cchid=481bec9f09d6d0b1f2185af8f7e26c57" width="1024"></p>
+
+<h2 id="3-recycle-recycle-recycle">3. Recycle, Recycle, Recycle</h2>
+
+<p>On Serving.Green you see the video background come and go from the beginning of the experience to the end. This was a very conscious decision, as it allowed us to keep the experience rich without adding new assets. Through the use of layering and CSS3, it’s as though we have three different versions of the video.</p>
+
+<ol>
+  <li>Full color</li>
+  <li>Black and white</li>
+  <li>Tinted green</li>
+</ol>
+
+<p>In this way, we can re-use the video (for three different effects), creating a much smaller page size and a better user experience.</p>
+
+<h2 id="-1">&nbsp;</h2>
+
+<p><img alt="" class="aligncenter size-full wp-image-4133" data-cms-original-src="/images/old-wordpress/2017/02/servinggreen-transparent.gif" height="1024" src="../../images/old-wordpress/2017/02/servinggreen-transparent4631.gif?_cchid=d651f34aef6e46d494a2cb3417406d43" width="1024"></p>
+
+<h2 id="4-text-masking">4. Text Masking</h2>
+
+<p>In earlier iterations of Serving.Green, we tried using fairly experimental methods of using text as a mask (for example the “Together, we can do this” layer near the start). In the end, it was much easier (with performance benefits) to make <a href="https://serving.green/wp-content/uploads/2016/07/together-we-can-do-this-ver2.png">giant images with alpha transparency</a> than it was to use SVG or Canvas!</p>
+
+<h2 id="-2">&nbsp;</h2>
+
+<p><img alt="" class="aligncenter size-full wp-image-4141" data-cms-original-src="/images/old-wordpress/2017/02/playfair.jpg" height="439" src="../../images/old-wordpress/2017/02/playfaircb8b.jpg?_cchid=2f01c43af5d5836def66f36524d5cca4" width="710"></p>
+
+<h2 id="5-too-many-fonts">5. Too Many Fonts</h2>
+
+<p>With <a href="http://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html">webfonts</a> being critical to a site’s unique look and feel and legibility, it’s easy to get caught up in using a boatload of fonts all in one project. We chose to use only one font family for this project, and only the 4 weights and styles we actually needed (400, 400i, 700, 900). This helped establish an economy of means throughout the site—in the design and with the assets and code base.</p>
+
+<h2 id="-3">&nbsp;</h2>
+
+<p><img alt="" class="aligncenter size-large wp-image-4143" data-cms-original-src="/images/old-wordpress/2017/02/geothermal-energy-plant-1024x576.jpg" height="576" src="../../images/old-wordpress/2017/02/geothermal-energy-plant-1024x57606f6.jpg?_cchid=0a0406bb63e708de6bc04a0f9c08ab3a" width="1024"></p>
+
+<h2 id="6-green-hosting">6. Green Hosting</h2>
+
+<p>Currently, Serving.Green is being hosted on <a href="https://1984hosting.com/">1984</a>. They use green, sustainable geothermal and hydroelectric power sources and are committed to environmentally responsible business practices by utilizing only electricity from renewable energy sources and placing emphasis on reaching the highest possible energy utilization efficiency levels. Finding a green host is a <em>huge</em> way to improve your website’s environmental impact.</p>
+
+<h2 id="-4">&nbsp;</h2>
+
+<p><img alt="" class="aligncenter wp-image-4142 size-full" data-cms-original-src="/images/old-wordpress/2017/02/cdnjs.jpg" height="371" src="../../images/old-wordpress/2017/02/cdnjse186.jpg?_cchid=a293eb1661a99b99d21ccfe0b9769240" width="1110"></p>
+
+<h2 id="7-hosted-libraries">7. Hosted Libraries</h2>
+
+<p>Script libraries such as jQuery, Bootstrap, and Angular make common scripting tasks easier by doing some of the heavy lifting for us web developers. It’s no surprise that these libraries get included in many of the websites we build, and the code of these libraries is exactly the same no matter where it’s being used. Hosted libraries such as <a href="https://developers.google.com/speed/libraries/">Google Hosted Libraries</a> or <a href="https://cdnjs.com/libraries">CDNJS.com</a> are CDNs (content delivery networks) that hold some of these commonly-used resources in multiple locations around the world so that they can be downloaded from wherever is closer to device asking for that resource. They also allow us to offload the hosting of certain resources from our main server and to facilitate the reuse of libraries we may have already downloaded from a site we were browsing a few minutes or weeks ago. As long as the site exists in our browser cache we can skip the download and save a bit of energy—and probably fossil fuels being burned.</p>
+
+<h2 id="have-your-green-and-eat-it-too">Have Your Green, and Eat It Too.</h2>
+
+<p>Serving.Green is our proof case for a sustainable site that is also rich in experience. Making a site lean doesn’t mean it has to be mean. We do not have to convert all our websites to plain text, and use only dark shades of grey to save the energy it takes to produce bright white light on a display. We can and should produce rich experiences that educate and inspire without being wasteful.</p>
+
+<p><strong>Update February 16, 2017:</strong> Andrew &amp; I just participated as speakers in the SustainableUX 2017 Webinar. <a href="https://www.youtube.com/watch?v=DrlwfchL5HQ&amp;feature=youtu.be&amp;t=34m50s">Watch our segment</a>.</p>
+
+            </div>
+            <div class="post-content__categories col-10-to-13 m-col-2-to-10 s-col-1-to-5">
+                <h2 class="mono-body">Topics</h2>
+                <ul>
+                    
+                    <li class="mono-body"><a href="../../archive/design/index.html">Design</a></li>
+                    
+                    <li class="mono-body"><a href="../../archive/sustainability/index.html">Sustainability</a></li>
+                    
+                    <li class="mono-body"><a href="../../archive/technology/index.html">Technology</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <section class="project-start-cta wo-stacked border-top border-bottom">
+    <h2 class="editable" data-cms-index="0" data-cms-source="/_includes/lets-get-going.html">
+        Ready to work together?
+    </h2>
+    <h3>
+        <a href="../../start-a-project/index.html">
+            Start a project
+        </a>
+        <div class="project-start-cta__arrow"></div>
+    </h3>
+</section>
+
+
+    <footer class="main-footer border-top wo" id="mainFooter">
+	<a class="col-1-to-3 editable m-col-1-to-2 s-col-1-to-2" data-cms-index="0" data-cms-source="/_includes/footer.html" href="../../about/bcorp/index.html">
+		<img alt="Certified B Corporation" class="black-only" data-cms-original-src="/images/b-corporation-logo-black.svg" src="../../images/b-corporation-logo-black6b45.svg?_cchid=c86e546e27ec839f5255d5d1a4d95ed9">
+		<img alt="Certified B Corporation" class="white-only" data-cms-original-src="/images/b-corporation-logo-white.svg" src="../../images/b-corporation-logo-white921b.svg?_cchid=e5335de756a79ac75d85eed518947de3">
+	</a>
+	<div class="list col-3-to-5 m-col-4-to-8 s-col-1-to-5">
+		<h2 class="hidden">Contact</h2>
+		<a class="editable" data-cms-index="1" data-cms-source="/_includes/footer.html" href="tel:1-204-477-4474">+1 204-477-4474</a>
+		<a class="editable" data-cms-index="2" data-cms-source="/_includes/footer.html" href="mailto:hello@manoverboard.com">hello@manoverboard.com</a>
+	</div>
+	<div class="list col-5-to-7 m-col-8-to-11 s-col-1-to-5">
+		<h2 class="hidden">Social media</h2>
+		<a class="editable" data-cms-index="3" data-cms-source="/_includes/footer.html" href="https://www.instagram.com/manoverboardinc/" rel="noopener noreferrer" target="_blank">Instagram</a>
+		<a class="editable" data-cms-index="4" data-cms-source="/_includes/footer.html" href="https://ca.linkedin.com/company/manoverboard" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+		<a class="editable" data-cms-index="5" data-cms-source="/_includes/footer.html" href="https://twitter.com/manoverboardinc/" rel="noopener noreferrer" target="_blank">Twitter</a>
+	</div>
+	<div class="newsletter-subscribe col-7-to-9 m-col-4-to-10 s-col-1-to-5">
+		<h2 class="newsletter-subscribe__heading">
+			Newsletter
+		</h2>
+		<!-- new Campaign Monitor form -->
+		<form action="https://www.createsend.com/t/subscribeerror?description=" class="js-cm-form" data-id="5B5E7037DA78A748374AD499497E309E447519013EAF5BED06D7A9CF2D7CBBC403B5FF81850048E294493CE00B1B90C3A2ED5CECCDB89D5293F789C8F11316C1" id="subForm" method="post">
+			<!-- <label>Name</label>
+			<input aria-label="Name" id="fieldName" maxlength="200" name="cm-name" class="strip"> -->
+			<label class="light">Email</label>
+			<div>
+				<input aria-label="Email" autocomplete="Email" class="js-cm-email-input qa-input-email strip" id="fieldEmail" maxlength="200" name="cm-ktzity-ktzity" required="" type="email">
+				<button class="strip" type="submit">Subscribe</button>
+			</div>
+		<input name="_encrypted_details" type="hidden" value="8e03188416586cc142ba81ca942625ce"></form>
+		<script src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js" type="text/javascript"></script>
+	</div>
+	<div class="right col-9-to-13 m-hide s-hide">
+		<button class="strip" id="toTop">
+			Top
+			<img alt="" aria-hidden="true" class="black-only" data-cms-original-src="/images/up-arrow-black.svg" src="../../images/up-arrow-black1b39.svg?_cchid=5c79f97da7e54dae79278c35233742bd">
+			<img alt="" aria-hidden="true" class="white-only" data-cms-original-src="/images/up-arrow-white.svg" src="../../images/up-arrow-white6588.svg?_cchid=64dd1cab0ebf1c5eb1cd3ecc23d833bd">
+		</button>
+	</div>
+
+	<div class="spacer col-1-to-13 m-col-1-to-11 s-col-1-to-5"></div>
+
+	<p class="col-1-to-3 light editable m-col-1-to-4 s-col-1-to-5" data-cms-index="6" data-cms-source="/_includes/footer.html">
+	    © 2021 Manoverboard
+	</p>
+	<a class="col-3-to-5 light editable m-col-4-to-6 s-col-1-to-2" data-cms-index="7" data-cms-source="/_includes/footer.html" href="../../privacy/index.html">
+		Privacy
+	</a>
+	<a class="light editable col-5-to-7 m-col-6-to-8 s-col-2-to-3" data-cms-index="8" data-cms-source="/_includes/footer.html" href="../../accessibility/index.html">
+		Accessibility
+	</a>
+	<p class="col-8-to-13 light right editable m-col-8-to-11 s-col-3-to-5" data-cms-index="9" data-cms-source="/_includes/footer.html">
+	    Made in Canada
+	</p>
+</footer>
+
+<div class="safari_only"></div>
+
+<!-- lottie support -->
+<script crossorigin="anonymous" integrity="sha512-u17Fj9cQ8L0qSebNF1zhbeAvbqSUBhX3jILF5zuZh2omdVev/zlHMeW0f2fDSW4o+/kbin6ZA9LtLfaXS0WIlQ==" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie_light.min.js"></script>
+
+<!-- end #scrollWrapper -->
+
+</div></div></body>
+<!-- Mirrored from manoverboard.com/blog/serving-green-the-mechanics-of-creating-a-sustainable-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Dec 2021 21:33:35 GMT -->
+</html>
