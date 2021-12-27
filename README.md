@@ -21,3 +21,6 @@ ripped using httrack (terminal version)
 
 6. [vovi-portfolio](https://www.vovi.studio/)
     - ez rip
+
+7. [moremedia]
+    - nah  didn't  work as well
