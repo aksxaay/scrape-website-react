@@ -24,3 +24,7 @@ ripped using httrack (terminal version)
 
 7. [moremedia]
     - nah  didn't  work as well
+
+8. [amen.team](https://amen.team/)
+    - looks PAWG asf
+    -  only  partially  ripped
