@@ -1,30 +1,12 @@
-### portfolio-website
-
-Here's where I'll be shamelessly ripping off of others real actual hardwork.
-ripped using httrack (terminal version)
-1. [jerrywang](https://www.jw.works/)
-    - half ripped?
+## portfolio-website
+#### personal dev portfolio website
+well you can always go access 
+[scrape README file](/httrack-scrape/README.md)
 
 
-2. [dariaizbash-portfolio](https://www.dariaizbash.com/)
-    - fully rippeds
 
-3. [baillat-studios](https://baillatstudio.com/en)
-    - lowkey huge asf
+anyways.
 
-4. [smartup-visuals](https://smartupvisuals.com/)
-    - re-run twice
-
-
-5. [manover-board-portfolio](https://manoverboard.com/)
-
-
-6. [vovi-portfolio](https://www.vovi.studio/)
-    - ez rip
-
-7. [moremedia]
-    - nah  didn't  work as well
-
-8. [amen.team](https://amen.team/)
-    - looks PAWG asf
-    -  only  partially  ripped
+[devaslife](https://www.youtube.com/watch?v=bSMZgXzC9AA)
+- stack he's using
+Next.js, Chakra UI, Framer Motion, and Three.js
