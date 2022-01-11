@@ -26,3 +26,9 @@ Next.js, Chakra UI, Framer Motion, and Three.js
 
 install `npm i howfat` to view all the dependencies.
 `npx howfat -r tree <package>` ez. to view dependency tree.
+
+also using the 'Material Icon Theme' vscode extensions
+
+
+so basically what's happening is that `npm audit fix --force` has been beating up shit
+pushing back the create-react-app from v5.0 to v1.2
