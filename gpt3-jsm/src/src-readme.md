@@ -21,3 +21,9 @@ download and install `es7 snippets`
 
 for some reason you can't bracket ReactDOM as 
 `{ReactDOM}`
+
+oh react has hot-reloading by default.
+
+
+### File and Folder Structure
+
