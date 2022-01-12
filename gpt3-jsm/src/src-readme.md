@@ -28,6 +28,15 @@ oh react has hot-reloading by default.
 ### 2. File and Folder Structure
 when naming .jsx you have to Capitalize the first letter of the
 
+```
+jsx - After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.
+
+Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
+```
+jsx - also prevents XSS (cross site scripting)
+
+
+
 [why jsx](https://reactjs.org/docs/introducing-jsx.html)
 
 **article**
@@ -35,3 +44,10 @@ when naming .jsx you have to Capitalize the first letter of the
   - Article.jsx
 
 what is `Call to Action (CTA)`
+
+
+there is also a specific way to js export.
+
+
+created `/src/containers` for even bigger packaged components
+you can also check in eslint, so you can be 'lint free'
