@@ -1,4 +1,4 @@
-### Intro
+### 1. Intro
 
 but basically we're trying to hook the react application to the `index.html`?
 
@@ -25,5 +25,13 @@ for some reason you can't bracket ReactDOM as
 oh react has hot-reloading by default.
 
 
-### File and Folder Structure
+### 2. File and Folder Structure
+when naming .jsx you have to Capitalize the first letter of the
 
+[why jsx](https://reactjs.org/docs/introducing-jsx.html)
+
+**article**
+  - article.css
+  - Article.jsx
+
+what is `Call to Action (CTA)`
