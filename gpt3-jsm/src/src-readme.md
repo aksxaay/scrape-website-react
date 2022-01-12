@@ -51,3 +51,26 @@ there is also a specific way to js export.
 
 created `/src/containers` for even bigger packaged components
 you can also check in eslint, so you can be 'lint free'
+
+also added each individually
+
+```
+<div>
+  <div className="App">
+    <div className="gradient__bg">
+      <Navbar />
+      <Headers />
+    </div>
+    <Brand />
+    <WhatGPT3 />
+    <Features />
+    <Possibility />
+    <CTA />
+    <Blog />
+    <Footer />
+  </div>
+</div>
+```
+so yeah apparently react is simply to structure it.
+
+`npm start`
