@@ -74,3 +74,34 @@ also added each individually
 so yeah apparently react is simply to structure it.
 
 `npm start`
+
+
+### 3. Navigation Bar
+
+### 4. Header
+
+### 5. Brands section
+
+### 6. What is GPT3 Section in
+
+### 7. Future is now Section
+
+### 8. Features
+
+
+### 8. CTA
+
+### 9. Blog Section
+
+
+### 8. Footer
+
+### 8. Deployment
+
+
+
+
+
+
+
+
