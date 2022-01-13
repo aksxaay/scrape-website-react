@@ -78,6 +78,19 @@ so yeah apparently react is simply to structure it.
 
 ### 3. Navigation Bar
 
+added src/index.css
+added src/App.css
+
+we're also using BEM convention
+- Block
+- Element
+- Modifier
+`gpt3__navbar` so yeah it apparently helps scale css on big scale
+
+```BEM — Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development```
+
+we also styled each component.
+
 ### 4. Header
 
 ### 5. Brands section

@@ -5,8 +5,11 @@
   scroll-behavior: smooth;
 }
 
+/* temporary */
 body {
-  background: var(--color-bg);
+  /* background: var(--color-bg); */
+  background: #fff;
+
 }
 
 a {
