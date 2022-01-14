@@ -3,7 +3,7 @@ import React from 'react'
 
 // imports
 import { Article, Brand, CTA, Feature, Navbar} from './components'
-import { Blog, Features, Footer, Header, Possibility, WhatGPT3} from './container'
+import { Blog, Features, Footer, Header, Possibility, WhatGPT3} from './containers'
 
 import './App.css'
 

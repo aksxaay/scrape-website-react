@@ -92,9 +92,11 @@ we're also using BEM convention
 we also styled each component.
 
 ### 4. Header
+header also done
 
 ### 5. Brands section
-
+we're tryna simplify the import process
+create helper file. -> imports.js
 ### 6. What is GPT3 Section in
 
 ### 7. Future is now Section
