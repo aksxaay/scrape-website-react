@@ -3,6 +3,8 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+
+  background: var(--color-bg)
 }
 
 .gpt3__features-heading {
